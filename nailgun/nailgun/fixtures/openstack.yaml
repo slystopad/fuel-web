@@ -136,6 +136,112 @@
           volumes: []
     attributes_metadata:
       editable:
+        ldap:
+          metadata:
+            label: "LDAP"
+            weight: 10
+          ldap_url:
+            value: "ldaps://nod.apple.com:636"
+            label: "LDAP directory URL"
+            description: "LDAP user DN for accessing directory"
+            weight: 10
+            type: "text"
+          ldap_user:
+            value: "uid=ecsnod_sys,cn=users,dc=apple,dc=com"
+            label: "User DN"
+            description: "LDAP user DN for accessing directory"
+            weight: 20
+            type: "text"
+          ldap_pass:
+            value: "changeme"
+            label: "LDAP password"
+            description: "Password for LDAP user"
+            weight: 30
+            type: "password"
+          ldap_suffix:
+            value: "dc=apple,dc=com"
+            label: "LDAP suffix"
+            description: "A node of the directory tree associated with a particular database"
+            weight: 30
+            type: "password"
+          ldap_user_objectclass:
+            value: "posixAccount"
+            label: "User's objectclass"
+            description: "LDAP objectclass which represents user"
+            weight: 30
+            type: "text"
+          ldap_user_tree_dn:
+            value: "cn=users,dc=apple,dc=com"
+            label: "User tree DN"
+            description: "LDAP container where user's account will leave"
+            weight: 30
+            type: "text"
+          ldap_user_id_attribute:
+            value: "uid"
+            label: "User ID attribute"
+            description: "LDAP attribute of user's objectclass which holds users ID"
+            weight: 30
+            type: "text"
+          ldap_user_name_attribute:
+            value: "uid"
+            label: "User Name attribute"
+            description: "LDAP attribute of user's objectclass which holds user's name"
+            weight: 30
+            type: "text"
+          ldap_user_pass_attribute:
+            value: "userPassword"
+            label: "User Name attribute"
+            description: "LDAP attribute of user's objectclass which holds user's password"
+            weight: 30
+            type: "text"
+          ldap_user_filter:
+            value: "(member=CN=hets-it,cn=groups,dc=apple,dc=com)"
+            label: "Users filter"
+            description: "LDAP filter for user searches"
+            weight: 30
+            type: "text"
+          ldap_group_tree_dn:
+            value: "cn=groups,dc=apple,dc=com"
+            label: "Groups tree DN"
+            description: "LDAP container where groups leave"
+            weight: 30
+            type: "text"
+          ldap_group_filter:
+            value: "(|(cn=hets-it)(cn=ecs*))"
+            label: "Groups filter"
+            description: "LDAP filter for groups searches"
+            weight: 30
+            type: "text"
+          ldap_group_objectclass:
+            value: "posixGroup"
+            label: "Group's objectclass"
+            description: "LDAP objectclass which represents group"
+            weight: 30
+            type: "text"
+          ldap_group_id_attribute:
+            value: "cn"
+            label: "Group ID attribute"
+            description: "LDAP attribute of group's objectclass which holds group ID"
+            weight: 30
+            type: "text"
+          ldap_group_desc_attribute:
+            value: "description"
+            label: "Groups description attribute"
+            description: "LDAP attribute of group's objectclass which holds group description"
+            weight: 30
+            type: "text"
+          ldap_group_name_attribute:
+            value: "cn"
+            label: "Group Name attribute"
+            description: "LDAP attribute of group's objectclass which holds group's name"
+            weight: 30
+            type: "text"
+          ldap_group_member_attribute:
+            value: "memberUid"
+            label: "Group Member attribute"
+            description: "LDAP attribute of group's objectclass which holds group member"
+            weight: 30
+            type: "text"
         access:
           metadata:
             label: "Access"
