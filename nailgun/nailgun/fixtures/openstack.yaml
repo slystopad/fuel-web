@@ -136,9 +136,9 @@
           volumes: []
     attributes_metadata:
       editable:
-        ldap:
+        keystone_ldap:
           metadata:
-            label: "LDAP"
+            label: "Parameters for Keystone LDAP backend"
             weight: 10
           ldap_url:
             value: "ldaps://nod.apple.com:636"
@@ -163,7 +163,7 @@
             label: "LDAP suffix"
             description: "A node of the directory tree associated with a particular database"
             weight: 30
-            type: "password"
+            type: "text"
           ldap_user_objectclass:
             value: "posixAccount"
             label: "User's objectclass"
