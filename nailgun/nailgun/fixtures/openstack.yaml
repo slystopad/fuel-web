@@ -140,6 +140,12 @@
           metadata:
             label: "Parameters for Keystone LDAP backend"
             weight: 10
+          use_ldap:
+            value: false
+            label: "OpenStack Keystone LDAP backend"
+            description: "Enables Keystone integration with LDAP server"
+            weight: 10
+            type: "checkbox"
           ldap_url:
             value: "ldaps://nod.apple.com:636"
             label: "LDAP directory URL"
