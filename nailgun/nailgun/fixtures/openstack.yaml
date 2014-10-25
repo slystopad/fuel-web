@@ -162,13 +162,13 @@
             value: "changeme"
             label: "LDAP password"
             description: "Password for LDAP user"
-            weight: 30
+            weight: 21
             type: "password"
           ldap_suffix:
             value: "dc=apple,dc=com"
             label: "LDAP suffix"
             description: "A node of the directory tree associated with a particular database"
-            weight: 30
+            weight: 11
             type: "text"
           ldap_user_objectclass:
             value: "posixAccount"
@@ -247,6 +247,54 @@
             label: "Group Member attribute"
             description: "LDAP attribute of group's objectclass which holds group member"
             weight: 30
+            type: "text"
+          ldap_tenant_tree_dn:
+            value: "cn=tenants,dc=apple,dc=com"
+            label: "Tenants tree DN"
+            description: "LDAP container where Openstack tenants leave"
+            weight: 80
+            type: "text"
+          ldap_tenant_filter:
+            value: "(member=CN=hets-it,cn=tenants,dc=apple,dc=com)"
+            label: "Tenants filter"
+            description: "LDAP filter for tenants searches"
+            weight: 81
+            type: "text"
+          ldap_tenant_id_prefix:
+            value: "tntid"
+            label: "Tenants id prefix"
+            description: "TODO"
+            weight: 82
+            type: "text"
+          ldap_tenant_name_prefix:
+            value: "tntname"
+            label: "Tenants name prefix"
+            description: "TODO"
+            weight: 83
+            type: "text"
+          ldap_role_tree_dn:
+            value: "cn=ostkroles,dc=apple,dc=com"
+            label: "Roles tree DN"
+            description: "LDAP container where Openstack tenants leave"
+            weight: 90
+            type: "text"
+          ldap_role_filter:
+            value: "(member=CN=hets-it,cn=ostkroles,dc=apple,dc=com)"
+            label: "Roles filter"
+            description: "LDAP filter for roles searches"
+            weight: 91
+            type: "text"
+          ldap_role_id_prefix:
+            value: "roleid"
+            label: "Roles id prefix"
+            description: "TODO"
+            weight: 92
+            type: "text"
+          ldap_role_name_prefix:
+            value: "ostkrole"
+            label: "Roles name prefix"
+            description: "TODO"
+            weight: 93
             type: "text"
         access:
           metadata:
