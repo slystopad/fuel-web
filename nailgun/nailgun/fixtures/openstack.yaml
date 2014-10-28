@@ -153,7 +153,7 @@
             weight: 10
             type: "text"
           ldap_user:
-            value: "uid=cn=users,dc=openstack,dc=example,dc=com"
+            value: "cn=admin,dc=openstack,dc=example,dc=com"
             label: "User DN"
             description: "LDAP user DN for accessing directory"
             weight: 20
