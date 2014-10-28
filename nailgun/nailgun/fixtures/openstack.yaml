@@ -147,13 +147,13 @@
             weight: 10
             type: "checkbox"
           ldap_url:
-            value: "ldaps://nod.apple.com:636"
+            value: "ldap://ldap.example.com:636"
             label: "LDAP directory URL"
             description: "LDAP user DN for accessing directory"
             weight: 10
             type: "text"
           ldap_user:
-            value: "uid=ecsnod_sys,cn=users,dc=apple,dc=com"
+            value: "uid=cn=users,dc=openstack,dc=example,dc=com"
             label: "User DN"
             description: "LDAP user DN for accessing directory"
             weight: 20
@@ -165,7 +165,7 @@
             weight: 21
             type: "password"
           ldap_suffix:
-            value: "dc=apple,dc=com"
+            value: "dc=openstack,dc=example,dc=com"
             label: "LDAP suffix"
             description: "A node of the directory tree associated with a particular database"
             weight: 11
@@ -177,7 +177,7 @@
             weight: 30
             type: "text"
           ldap_user_tree_dn:
-            value: "cn=users,dc=apple,dc=com"
+            value: "cn=Users,dc=openstack,dc=example,dc=com"
             label: "User tree DN"
             description: "LDAP container where user's account will leave"
             weight: 30
@@ -201,19 +201,19 @@
             weight: 30
             type: "text"
           ldap_user_filter:
-            value: "(member=CN=hets-it,cn=groups,dc=apple,dc=com)"
+            value: "(objectClass=*)"
             label: "Users filter"
             description: "LDAP filter for user searches"
             weight: 30
             type: "text"
           ldap_group_tree_dn:
-            value: "cn=groups,dc=apple,dc=com"
+            value: "cn=Groups,dc=openstack,dc=example,dc=com"
             label: "Groups tree DN"
             description: "LDAP container where groups leave"
             weight: 30
             type: "text"
           ldap_group_filter:
-            value: "(|(cn=hets-it)(cn=ecs*))"
+            value: "(objectClass=*)"
             label: "Groups filter"
             description: "LDAP filter for groups searches"
             weight: 30
@@ -249,13 +249,13 @@
             weight: 30
             type: "text"
           ldap_tenant_tree_dn:
-            value: "cn=tenants,dc=apple,dc=com"
+            value: "cn=Tenants,dc=openstack,dc=example,dc=com"
             label: "Tenants tree DN"
             description: "LDAP container where Openstack tenants leave"
             weight: 80
             type: "text"
           ldap_tenant_filter:
-            value: "(member=CN=hets-it,cn=tenants,dc=apple,dc=com)"
+            value: "(objectClass=*)"
             label: "Tenants filter"
             description: "LDAP filter for tenants searches"
             weight: 81
@@ -273,13 +273,13 @@
             weight: 83
             type: "text"
           ldap_role_tree_dn:
-            value: "cn=ostkroles,dc=apple,dc=com"
+            value: "cn=Roles,dc=openstack,dc=example,dc=com"
             label: "Roles tree DN"
             description: "LDAP container where Openstack tenants leave"
             weight: 90
             type: "text"
           ldap_role_filter:
-            value: "(member=CN=hets-it,cn=ostkroles,dc=apple,dc=com)"
+            value: "(objectClass=*)"
             label: "Roles filter"
             description: "LDAP filter for roles searches"
             weight: 91
