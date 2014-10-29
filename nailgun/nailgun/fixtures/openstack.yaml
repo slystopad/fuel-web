@@ -164,6 +164,12 @@
             description: "Password for LDAP user"
             weight: 21
             type: "password"
+          ldap_service_users_pass:
+            value: "changeme"
+            label: "Password for all OpenStack service users"
+            description: "Password from LDAP users which represents Openstack service users (nova, cinder, etc)"
+            weight: 22
+            type: "password"
           ldap_suffix:
             value: "dc=openstack,dc=example,dc=com"
             label: "LDAP suffix"
