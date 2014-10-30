@@ -147,7 +147,7 @@
             weight: 10
             type: "checkbox"
           ldap_url:
-            value: "ldap://ldap.example.com:636"
+            value: "ldap://ldap.example.com:389"
             label: "LDAP directory URL"
             description: "LDAP user DN for accessing directory"
             weight: 10
@@ -167,7 +167,7 @@
           ldap_service_users_pass:
             value: "changeme"
             label: "Password for all OpenStack service users"
-            description: "Password from LDAP users which represents Openstack service users (nova, cinder, etc)"
+            description: "Service user's password in LDAP (service users should exist in LDAP tree)"
             weight: 22
             type: "password"
           ldap_suffix:
@@ -314,14 +314,14 @@
             type: "checkbox"
           ha_type:
             value: "standalone"
-            label: "f5_ha_type in f5_bigip_lbaas_agent.ini"
-            description: "TODO"
+            label: "f5_ha_type"
+            description: "f5_ha_type in f5_bigip_lbaas_agent.ini"
             weight: 11
             type: "text"
           global_routed_mode:
             value: false
-            label: "f5_global_routed_mode in f5_bigip_lbaas_agent.ini"
-            description: "TODO"
+            label: "f5_global_routed_mode"
+            description: "f5_global_routed_mode in f5_bigip_lbaas_agent.ini"
             weight: 12
             type: "checkbox"
           snat_mode:
