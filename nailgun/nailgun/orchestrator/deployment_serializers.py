@@ -806,6 +806,10 @@ class DeploymentMultinodeSerializer(object):
             objects.Release.get_orchestrator_data_dict(release)
         )
         attrs['nodes'] = self.node_list(get_nodes_not_for_deletion(cluster))
+	
+	## hack to rewrite pregenerated neutron password for keystone
+	## value is obtained from custom maigun UI field
+	attrs['quantum_settings']['keystone']['admin_password'] = attrs['keystone_ldap']['ldap_service_users_pass']
 
         for node in attrs['nodes']:
             if node['role'] in 'cinder':
