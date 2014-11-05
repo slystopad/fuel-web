@@ -147,31 +147,31 @@
             weight: 10
             type: "checkbox"
           ldap_url:
-            value: "ldap://ldap.example.com:389"
+            value: "ldap://172.16.41.239"
             label: "LDAP directory URL"
             description: "LDAP user DN for accessing directory"
             weight: 10
             type: "text"
           ldap_user:
-            value: "cn=admin,dc=openstack,dc=example,dc=com"
+            value: "cn=admin,dc=example,dc=com"
             label: "User DN"
             description: "LDAP user DN for accessing directory"
             weight: 20
             type: "text"
           ldap_pass:
-            value: "changeme"
+            value: "ldaproot"
             label: "LDAP password"
             description: "Password for LDAP user"
             weight: 21
             type: "password"
           ldap_service_users_pass:
-            value: "changeme"
+            value: "service"
             label: "Password for all OpenStack service users"
             description: "Service user's password in LDAP (service users should exist in LDAP tree)"
             weight: 22
             type: "password"
           ldap_suffix:
-            value: "dc=openstack,dc=example,dc=com"
+            value: "dc=example,dc=com"
             label: "LDAP suffix"
             description: "A node of the directory tree associated with a particular database"
             weight: 11
@@ -183,7 +183,7 @@
             weight: 30
             type: "text"
           ldap_user_tree_dn:
-            value: "cn=Users,dc=openstack,dc=example,dc=com"
+            value: "cn=users,dc=example,dc=com"
             label: "User tree DN"
             description: "LDAP container where user's account will leave"
             weight: 30
@@ -213,7 +213,7 @@
             weight: 30
             type: "text"
           ldap_group_tree_dn:
-            value: "cn=Groups,dc=openstack,dc=example,dc=com"
+            value: "cn=groups,dc=example,dc=com"
             label: "Groups tree DN"
             description: "LDAP container where groups leave"
             weight: 30
@@ -255,7 +255,7 @@
             weight: 30
             type: "text"
           ldap_tenant_tree_dn:
-            value: "cn=Tenants,dc=openstack,dc=example,dc=com"
+            value: "cn=tenants,dc=example,dc=com"
             label: "Tenants tree DN"
             description: "LDAP container where Openstack tenants leave"
             weight: 80
@@ -267,19 +267,19 @@
             weight: 81
             type: "text"
           ldap_tenant_id_prefix:
-            value: "tntid"
+            value: ""
             label: "Tenants id prefix"
             description: "TODO"
             weight: 82
             type: "text"
           ldap_tenant_name_prefix:
-            value: "tntname"
+            value: ""
             label: "Tenants name prefix"
             description: "TODO"
             weight: 83
             type: "text"
           ldap_role_tree_dn:
-            value: "cn=Roles,dc=openstack,dc=example,dc=com"
+            value: "cn=roles,dc=example,dc=com"
             label: "Roles tree DN"
             description: "LDAP container where Openstack tenants leave"
             weight: 90
@@ -291,13 +291,13 @@
             weight: 91
             type: "text"
           ldap_role_id_prefix:
-            value: "roleid"
+            value: ""
             label: "Roles id prefix"
             description: "TODO"
             weight: 92
             type: "text"
           ldap_role_name_prefix:
-            value: "ostkrole"
+            value: ""
             label: "Roles name prefix"
             description: "TODO"
             weight: 93
@@ -331,19 +331,19 @@
             weight: 13
             type: "checkbox"
           icontrol_hostname:
-            value: "127.0.0.1"
+            value: "172.16.41.236"
             label: "icontrol hostname"
             description: "F5 icontrol hostname"
             weight: 14
             type: "text"
           icontrol_username:
-            value: "admin"
+            value: "lbaas"
             label: "icontrol username"
             description: "F5 icontrol username"
             weight: 15
             type: "text"
           icontrol_password:
-            value: "changeme"
+            value: "lbaas"
             label: "icontrol password"
             description: "F5 icontrol password"
             weight: 16
