@@ -348,6 +348,70 @@
             description: "F5 icontrol password"
             weight: 16
             type: "password"
+        netapp:
+          metadata:
+            label: "NetApp parameters for Cinder backend"
+            weight: 12
+	  netapp_server_hostname:
+            value: "172.16.41.231"
+            label: "netapp_server_hostname"
+            description: ""
+            weight: 10
+            type: "text"
+	  netapp_server_port:
+	    value: "80"
+            label: "netapp_server_port"
+            description: ""
+            weight: 11
+            type: "text"
+	  netapp_storage_protocol:
+	    value: "iscsi"
+            label: "netapp_storage_protocol"
+            description: ""
+            weight: 12
+            type: "text"
+	  netapp_storage_family:
+	    value: "ontap_cluster"
+            label: "netapp_storage_family"
+            description: ""
+            weight: 13
+            type: "text"
+	  netapp_vserver:
+	    value: "apple-vserver"
+            label: "netapp_vserver"
+            description: ""
+            weight: 14
+            type: "text"
+	  netapp_volume_list:
+	    value: "/test"
+            label: "netapp_volume_list"
+            description: ""
+            weight: 15
+            type: "text"
+	  netapp_login:
+	    value: "admin"
+            label: "netapp_login"
+            description: ""
+            weight: 16
+            type: "text"
+	  netapp_password:
+	    value: "r00tme123!"
+            label: "netapp_password"
+            description: ""
+            weight: 17
+            type: "password"
+	  volume_driver:
+	    value: "cinder.volume.drivers.netapp.common.NetAppDriver"
+            label: "volume_driver"
+            description: ""
+            weight: 18
+            type: "text"
+	  volume_backend_name:
+	    value: "cmodeDirectiSCSI"
+            label: "volume_backend_name"
+            description: ""
+            weight: 19
+            type: "text"
         access:
           metadata:
             label: "Access"
