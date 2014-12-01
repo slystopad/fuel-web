@@ -194,10 +194,10 @@
             description: "LDAP attribute of user's objectclass which holds users ID"
             weight: 30
             type: "text"
-          ldap_user_name_attribute:
-            value: "uid"
-            label: "User Name attribute"
-            description: "LDAP attribute of user's objectclass which holds user's name"
+          ldap_user_mail_attribute:
+            value: "mail"
+            label: "User Mail attribute"
+            description: "LDAP attribute of user's objectclass which holds user's email address"
             weight: 30
             type: "text"
           ldap_user_pass_attribute:
@@ -206,101 +206,11 @@
             description: "LDAP attribute of user's objectclass which holds user's password"
             weight: 30
             type: "text"
-          ldap_user_filter:
-            value: "(objectClass=*)"
-            label: "Users filter"
-            description: "LDAP filter for user searches"
+          ldap_user_enabled_attribute:
+            value: "enabled"
+            label: "User enabled attribute"
+            description: "LDAP attribute of user's objectclass which defines state of user (ebabled/disabled)"
             weight: 30
-            type: "text"
-          ldap_group_tree_dn:
-            value: "cn=groups,dc=example,dc=com"
-            label: "Groups tree DN"
-            description: "LDAP container where groups leave"
-            weight: 30
-            type: "text"
-          ldap_group_filter:
-            value: "(objectClass=*)"
-            label: "Groups filter"
-            description: "LDAP filter for groups searches"
-            weight: 30
-            type: "text"
-          ldap_group_objectclass:
-            value: "posixGroup"
-            label: "Group's objectclass"
-            description: "LDAP objectclass which represents group"
-            weight: 30
-            type: "text"
-          ldap_group_id_attribute:
-            value: "cn"
-            label: "Group ID attribute"
-            description: "LDAP attribute of group's objectclass which holds group ID"
-            weight: 30
-            type: "text"
-          ldap_group_desc_attribute:
-            value: "description"
-            label: "Groups description attribute"
-            description: "LDAP attribute of group's objectclass which holds group description"
-            weight: 30
-            type: "text"
-          ldap_group_name_attribute:
-            value: "cn"
-            label: "Group Name attribute"
-            description: "LDAP attribute of group's objectclass which holds group's name"
-            weight: 30
-            type: "text"
-          ldap_group_member_attribute:
-            value: "memberUid"
-            label: "Group Member attribute"
-            description: "LDAP attribute of group's objectclass which holds group member"
-            weight: 30
-            type: "text"
-          ldap_tenant_tree_dn:
-            value: "cn=tenants,dc=example,dc=com"
-            label: "Tenants tree DN"
-            description: "LDAP container where Openstack tenants leave"
-            weight: 80
-            type: "text"
-          ldap_tenant_filter:
-            value: "(objectClass=*)"
-            label: "Tenants filter"
-            description: "LDAP filter for tenants searches"
-            weight: 81
-            type: "text"
-          ldap_tenant_id_prefix:
-            value: ""
-            label: "Tenants id prefix"
-            description: "TODO"
-            weight: 82
-            type: "text"
-          ldap_tenant_name_prefix:
-            value: ""
-            label: "Tenants name prefix"
-            description: "TODO"
-            weight: 83
-            type: "text"
-          ldap_role_tree_dn:
-            value: "cn=roles,dc=example,dc=com"
-            label: "Roles tree DN"
-            description: "LDAP container where Openstack tenants leave"
-            weight: 90
-            type: "text"
-          ldap_role_filter:
-            value: "(objectClass=*)"
-            label: "Roles filter"
-            description: "LDAP filter for roles searches"
-            weight: 91
-            type: "text"
-          ldap_role_id_prefix:
-            value: ""
-            label: "Roles id prefix"
-            description: "TODO"
-            weight: 92
-            type: "text"
-          ldap_role_name_prefix:
-            value: ""
-            label: "Roles name prefix"
-            description: "TODO"
-            weight: 93
             type: "text"
         f5:
           metadata:
