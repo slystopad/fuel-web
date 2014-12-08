@@ -158,7 +158,9 @@ class PriorityHASerializer51(PrioritySerializer):
 
         # We are deploying in parallel, so do not let us deploy more than
         # 6 controllers simultaneously or galera master may be exhausted
-        self.priority.in_parallel_by(self.by_role(nodes, 'controller'), 6)
+        #self.priority.in_parallel_by(self.by_role(nodes, 'controller'), 6)
+        
+        self.priority.one_by_one(self.by_role(nodes, 'controller'))
 
         self.priority.in_parallel(
             self.not_roles(nodes, [
